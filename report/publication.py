@@ -1,6 +1,9 @@
 from analysis.outcome import ReviewOutcome
+from report.partial_publication import publish_partial
 from report.store import ReportSnapshot, ReportStore
 from review.store import OrderStore
+
+__all__ = ('publish', 'publish_partial')
 
 
 def publish(store: ReportStore, outcome: ReviewOutcome) -> ReportSnapshot:

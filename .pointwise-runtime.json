@@ -2,6 +2,6 @@
   "version": 1,
   "kind": "cli",
   "setup": [],
-  "verify": ["python3", "-B", "check_project.py"],
-  "demo": ["python3", "-B", "demo.py", "--case", "all"]
+  "verify": ["python3", "-B", "run_verification.py"],
+  "demo": ["python3", "-B", "demo_partial.py"]
 }

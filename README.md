@@ -13,6 +13,20 @@ python3 -B demo.py --case all
 
 `demo.py` 的 `--case` 也可取 `rotated` 或 `symmetric`。演示从 `samples/` 读取有限样例，在临时目录中使用实际 SQLite 库。旋转样例另做一次勘误并重开中心库领取新旧定稿。
 
+遮挡后的局部重叠（V2）由运行清单的统一入口核验与演示：
+
+```sh
+python3 -B run_verification.py   # 原回归 + V1 遮挡对照 + V2 共同基准核验
+python3 -B demo_partial.py       # 遮挡对照、停站签发、混件拒办、勘误与按号复领
+```
+
+V2 的调用契约以 `PARTIAL.md` 为准：`overlap.issue.open_partial` 固定同批
+A/B/C 各一个冻结修订，`freeze_partial` 分边发行只读本边两侧原测，
+`export_partial_links` 在边件已自证时返回空元组；中心侧
+`report.publication.publish_partial` 验件、按双标记三元组门槛核定闭环并一次
+写成报告与回执，`report.history.get_partial`、`report.export.export_partial`
+按正式号复领。原 V1 接口、件字节、历史和回归保持不变。
+
 ## 一天的工作
 
 1. 打开站库和中心库并初始化。重开时继续使用原记录。

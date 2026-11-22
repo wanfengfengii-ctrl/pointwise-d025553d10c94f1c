@@ -1,0 +1,17 @@
+{
+  "batch": "contour-quarter-turn",
+  "observations": {
+    "a": {"station": "A", "markers": [{"category": "red", "point": [1, 0]}, {"category": "blue", "point": [1, 2]}]},
+    "b": {"station": "B", "markers": [{"category": "red", "point": [0, 0]}, {"category": "blue", "point": [2, 0]}]},
+    "c": {"station": "C", "markers": [{"category": "red", "point": [-1, 0]}, {"category": "blue", "point": [1, 0]}]}
+  },
+  "edges": {"AB": ["b", "a"], "AC": ["c", "a"], "BC": ["c", "b"]},
+  "probes": {"B": [0, 0], "C": [0, 0]},
+  "correction": {
+    "observation": "a",
+    "replacements": [
+      {"at": [1, 0], "category": "red", "point": [2, 0]},
+      {"at": [1, 2], "category": "blue", "point": [2, 2]}
+    ]
+  }
+}

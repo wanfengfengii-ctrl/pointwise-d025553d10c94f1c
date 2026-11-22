@@ -1,0 +1,12 @@
+{
+  "batch": "contour-half-turn",
+  "observations": {
+    "a": {"station": "A", "markers": [{"category": "rim", "point": [-1, 0]}, {"category": "rim", "point": [1, 0]}]},
+    "b": {"station": "B", "markers": [{"category": "rim", "point": [-1, 0]}, {"category": "rim", "point": [1, 0]}]},
+    "c": {"station": "C", "markers": [{"category": "rim", "point": [-1, 0]}, {"category": "rim", "point": [1, 0]}]},
+    "b_marked": {"station": "B", "markers": [{"category": "left", "point": [-1, 0]}, {"category": "right", "point": [1, 0]}]},
+    "c_reversed": {"station": "C", "markers": [{"category": "left", "point": [1, 0]}, {"category": "right", "point": [-1, 0]}]}
+  },
+  "edges": {"AB": ["b", "a"], "AC": ["c", "a"], "BC": ["c_reversed", "b_marked"]},
+  "probes": {"B": [1, 0], "C": [1, 0]}
+}
